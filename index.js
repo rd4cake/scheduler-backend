@@ -1,6 +1,5 @@
 import app from "./server.js";
 import mongodb from "mongodb";
-import dotenv from "dotenv";
 import scheduleDAO from "./dao/scheduleDAO.js"
 import authDAO from "./dao/authDAO.js"
 
