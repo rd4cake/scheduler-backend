@@ -7,7 +7,7 @@ import authDAO from "./dao/authDAO.js"
 dotenv.config();
 const MongoClient = mongodb.MongoClient;
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 3000;
 
 MongoClient.connect(process.env.DB_URI, {
   maxPoolSize: 50,
