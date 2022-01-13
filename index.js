@@ -3,7 +3,6 @@ import mongodb from "mongodb";
 import scheduleDAO from "./dao/scheduleDAO.js"
 import authDAO from "./dao/authDAO.js"
 
-dotenv.config();
 const MongoClient = mongodb.MongoClient;
 
 const port = process.env.PORT || 3000;
