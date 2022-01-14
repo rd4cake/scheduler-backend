@@ -14,7 +14,7 @@ export default function discordStrategy(passport) {
       {
         clientID: CLIENT_ID,
         clientSecret: CLIENT_SECRET,
-        callbackURL: "http://localhost:5000/auth/discord/callback",
+        callbackURL: "https://scheduler-165.herokuapp.com/auth/discord/callback",
         scope: ["identify", "email", "guilds", "guilds.join"],
       },
       async function (accessToken, refreshToken, profile, done) {
