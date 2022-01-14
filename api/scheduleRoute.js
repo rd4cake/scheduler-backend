@@ -9,7 +9,7 @@ router.get("/auth/discord", passport.authenticate("discord"));
 router.get(
   "/auth/discord/callback",
   passport.authenticate("discord", {
-    failureRedirect: "/",
+    failureRedirect: "/", session: true
   }),
   function (req, res) {
     res.redirect("http://localhost:3000/"); // Successful auth
