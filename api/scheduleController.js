@@ -49,7 +49,14 @@ export default class ScheduleController {
         date,
         setDate
       );
-      res.json({ status: "success" });
+      res.json({
+        status: "success",
+        text: text,
+        from: from,
+        to: to,
+        date: date,
+        setDate: setDate,
+      });
     } catch (e) {
       console.error(`post: ${e}`);
     }
@@ -82,14 +89,13 @@ export default class ScheduleController {
   }
 
   static async apiDeleteReview(req, res, next) {
-      try{
-          const id =req.body.id;
-          const from=req.body.from;
-          const response = await scheduleDAO.removeSchedule(id, from)
-          res.json({status: "sucess"})
-        }
-      catch (e) {
-          console.error(`${e}`)
-      }
+    try {
+      const id = req.body.id;
+      const from = req.body.from;
+      const response = await scheduleDAO.removeSchedule(id, from);
+      res.json({ status: "sucess" });
+    } catch (e) {
+      console.error(`${e}`);
+    }
   }
 }
