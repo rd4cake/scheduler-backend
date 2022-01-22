@@ -40,7 +40,7 @@ export default class ScheduleController {
       const from = req.body.from;
       const to = req.body.to;
       const date = new Date();
-      const setDate = new Date(2022, 6, 9);
+      const setDate = req.body.setDate;
 
       const respose = await scheduleDAO.addSchedule(
         text,
